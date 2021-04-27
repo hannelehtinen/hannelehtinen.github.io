@@ -1,0 +1,25 @@
+.kuva_zoom {
+  margin: 2em;
+} 
+
+.kuva_zoom img{
+      transition: .5s ease;
+  }
+
+  .kuva_zoom:hover img{
+      transform: scale(1.05);
+  }
+
+        
+  .oikea_kuva_zoom {
+    margin-top: 2em;
+    float: right;
+  }
+
+  .oikea_kuva_zoom img{
+    transition: .5s ease;
+}
+
+.oikea_kuva_zoom:hover img{
+    transform: scale(1.05);
+}
