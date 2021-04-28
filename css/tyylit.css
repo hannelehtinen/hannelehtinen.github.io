@@ -17,7 +17,7 @@ Tekijä: Hanne Lehtinen
 3. Content
 4. Index
 5. Work
-6. Education
+6. bigBoxcation
 7. Skills
 8. Alasivut
 9. Footer
@@ -31,6 +31,10 @@ Tekijä: Hanne Lehtinen
     box-sizing: border-box;
 }
 
+body {
+  background-image: linear-gradient( 135deg, #cee6f6 10%, #ffffff 100%);
+  
+  }
 /*
 ----------------------------------------------------
                     1. Navigaatio
@@ -47,7 +51,8 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background: white;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(250deg, #FFDEE9 0%, #B5FFFC 100%);
     font-family: 'montserrat', sans-serif;
     box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
     z-index:2;
@@ -116,7 +121,9 @@ nav a{
 
   header{
     height: 50%;
-    background-image: url(../pics/headeri.jpg);
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
+    filter: hue-rotate(360deg) brightness(100%);
     padding: 300px 20px 20px 20px;
     text-align: end;
     top: 0vh;
@@ -132,8 +139,85 @@ h1{
     font-family: 'montserrat', sans-serif;
 }
 
+.gridContainer, .gridContainer2 {
+  display: grid;
+  grid-gap: 10px;
+  margin: 2%;
+}
 
-  /* 
+.gridContainer{
+  justify-content: space-around;
+  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gridContainer2 {
+  justify-content: space-evenly;
+  padding: 3%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.gridItem {
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.gridItem2 {
+  display: flex;
+  padding: 0px;
+  border: white 2px;
+}
+
+.someImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px grey;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: auto;
+  top: -20px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  position: absolute;
+  background-color: #fefefe;
+  margin-top: 500px;
+  padding: 0px;
+  width: 50%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*
   ----------------------------------------------------
                     3. Content
   ----------------------------------------------------
@@ -142,7 +226,7 @@ h1{
 .content {
     padding-bottom: 3em;
     padding-top: 3em;
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
     padding: 30px;
     line-height: 1.5em;
@@ -153,8 +237,12 @@ h2{
   letter-spacing: 0.2em;
   font-size: 1.5em;
   font-family: 'montserrat', sans-serif;
-  margin-top: 3em;
+  margin-top: 2em;
   line-height: 1.8em;
+}
+
+h2 {
+  text-align: center;
 }
 
 .content h3 {
@@ -205,10 +293,11 @@ dt{
 
 /* Slideshow container */
 .slideshow-container {
-  width: 80%;
+  width: 100%;
   max-width: 1000px;
   position: relative;
   margin: auto;
+  background-color: white;
 }
 
 /* Hide the images by default */
@@ -310,11 +399,13 @@ dt{
 
   #me{
     width: 30%;
-    border-radius: 50%;
     float: right;
+    padding: 1%;
+    margin: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   }
 
-    /* 
+  /* 
   ----------------------------------------------------
                     5. Work
   ----------------------------------------------------
@@ -330,7 +421,7 @@ dt{
       
   .woikea, .wvasen {
     height:100%;
-    width: 48%; 
+    width: 49%; 
     margin-bottom: 1.5em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
     padding: 0.5em;
@@ -341,18 +432,23 @@ dt{
     }
     /* 
   ----------------------------------------------------
-                    6. Education
+                    6. bigBoxcation
   ----------------------------------------------------
   */
 
-  .edu div{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  .bigBox div{
     padding: 2%;
     margin: 5% 2%;
   }
   
-  .edu h2, .edu h3{
-    margin-top: 1em;
+  .bigBox {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2% auto;
+    background-color: white;
+    }
+
+  .bigBox h2, .bigBox h3{
+    margin-top: 0.5em;
     text-align: center;
   }
     /* 
@@ -506,7 +602,8 @@ footer {
     font-family: 'montserrat', sans-serif;
     font-size: 12px;
     box-shadow: 0px -4px 2px -2px rgba(0,0,0,.2);
-    background: white;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(-250deg, #FFDEE9 0%, #B5FFFC 100%);
     z-index: 100;
 }
 
@@ -526,8 +623,9 @@ footer {
           right: 0px;
           height: 60vh;
           top: -60vh;
-          background: white;
-          flex-direction: column;
+          background-color: #FFDEE9;
+          background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+                    flex-direction: column;
           align-items: center;
           width: 100%;
           transform: translateY(0%);
