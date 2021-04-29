@@ -232,47 +232,38 @@ h1 {
   box-shadow: 3px 3px 5px grey;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: auto;
-  top: -20px;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+.getBig, .getMedium, .getMediumBig {
+ border-radius: 20px;
 }
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-}
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.5s ease;
-}
-
 .getBig:hover {
-  transform: scale(3, 3);
+  transform: scale(2.5, 2.5);
+  transition: 0.9s;
+  transition-timing-function: ease-in-out;
+  z-index: 1;
+}
+
+.getBig:not(:hover) {
+  transform: scale(1, 1);
+  transition: 0.9s ease-in-out;
+}
+
+.getMedium:hover {
+  transform: scale(1.1, 1.1);
   transition: 0.5s;
   transition-timing-function: ease-out;
 }
 
-.getBig:not(:hover) {
+.getMedium:not(:hover) {
+  transform: scale(1, 1);
+  transition: 0.5s ease-in-out;
+}
+.getMediumBig:hover {
+  transform: scale(1.5, 1.5);
+  transition: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.getMediumBig:not(:hover) {
   transform: scale(1, 1);
   transition: 0.5s ease-in-out;
 }
@@ -335,10 +326,25 @@ p {
   text-align: center;
 }
 
+.leipis {
+  width: 90%;
+  margin: auto;
+}
 dt {
   margin-top: 20px;
 }
 
+.ang {
+  width: 11%;
+  float: right;
+  margin: 1%;
+}
+
+.css {
+  width:10%;
+  float: left;
+  margin: 2%;
+}
 .img {
   width: 100%;
 }
@@ -388,6 +394,7 @@ dt {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+
 }
 
 /* Position the "next button" to the right */
@@ -568,6 +575,7 @@ td {
   float: right;
   position: relative;
   width: 30%;
+  margin: 0px;
 }
 
 .kuvaOverlay:hover .img {
@@ -603,7 +611,7 @@ td {
 .borders {
   border: white 10px solid;
   box-shadow: 2px 4px 2px -2px rgba(0, 0, 0, 0.2);
-
+  margin-bottom: 0px;
   
 }
 .oikea {
@@ -714,8 +722,34 @@ footer {
   font-size: 12px;
   box-shadow: 0px -4px 2px -2px rgba(0, 0, 0, 0.2);
   background-color: #ffdee9;
-  background-image: linear-gradient(-250deg, #d492a9 0%, #6ebbb8 100%);
-  z-index: 100;
+  background-image: linear-gradient(135deg, #cee6f6 10%, #ffffff 100%);
+  animation: colorChange 10s ease-in-out infinite;
+  background-size: 400% 400%;
+    z-index: 100;
+  
+}
+
+.button {
+  border: none;
+  background-color: #f3eaed;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: black; 
+  border-radius: 20px;
+  font-family: 'hind', sans-serif;
+  margin: 20px 42%;
+    z-index: +2;
+}
+
+
+.button:hover {
+  background-image: linear-gradient(-250deg, #ffdee9 30%, #b5fffc 100%);
+  color: white;
 }
 
 /* 

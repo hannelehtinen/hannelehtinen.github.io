@@ -42,14 +42,17 @@
 
   <div class="content bigBox">
     <h2>Mockup ja Prototyyppi</h2>
+
     <img src="/img/nerd.png" class="img icons">
-    <p>Käyttöliittymäsuunnittelusta minulla ei ole varsinaista
+    <p class="leipis">Käyttöliittymäsuunnittelusta minulla ei ole varsinaista
       aikaisempaa kokemusta. Projektin alkaessa otin käyttööni Adobe
       XD -ohjelman, joka ei ollut entuudestaan tuttu. Suoritin ohjelmaa
       varten Udemyn Adobe XD Basics Course -kurssin ja sen avulla sain
       luotua toiminnallisen prototyypin valmiista tuotteesta. Adobe XD:n
       lisäksi tein mockup-luonnoksia myös Procreatella, Affinity
       Designerilla sekä käsin.</p>
+    <a href="https://xd.adobe.com/view/0867b0c3-c5ac-4e22-b7ac-1101f920a721-5d34/"> <button
+        class="button">Prototyyppi</button></a>
     <!-- Slideshow container -->
     <div class="slideshow-container">
       <!-- Full-width images with number and caption text -->
@@ -82,29 +85,33 @@
       <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
     </div>
     <!-- Slideshow container ends-->
-  
-    <h2 style="padding-top: 30px; font-size: 2em;"><a
-        href="https://xd.adobe.com/view/0867b0c3-c5ac-4e22-b7ac-1101f920a721-5d34/">Prototyyppi</a></h2>
+
+
+
   </div>
   <div class="content bigBox">
     <h2>käyttöliittymäsuunnittelu</h2> <br>
-    <p>Valmis prototyyppi on rakenteeltaan melko samankaltainen kuin
+    <p class="leipis">Valmis prototyyppi on rakenteeltaan melko samankaltainen kuin
       varsinainen tuote. Eroavaisuuksia prototyypissä on yksittäiset
       visuaaliset elementit, kuten ikonit, taustakuva ja varsinaiset
       tutoriaalinappulat. Lopullisen käyttöliittymän toteutin
       pääasiassa prototyyppiä mukaillen. Sovelluksen ulkoasu on
       toteutettu CSS:llä ja jonkin verran Angular Material
       -elementeillä, jotka olen itse muokannut sovelluksen tyyliin
-      sopivaksi. Olin pääasiallisesti vastuussa sovelluksen
-      visuaalisesta ilmeestä ja tyylittelystä joka komponentissa.</p> <br><br>
+      sopivaksi. Olin vastuussa sovelluksen
+      visuaalisesta ilmeestä ja tyylittelystä kaikissa muissa komponenteissa paitsi quiz-komponentissa ja
+      rekisteröitymis- ja kirjautumiskomponenteissa.</p> <br><br>
 
 
     <h2>Tutoriaali</h2> <br>
-    <p>Alla tutoriaalin suoritustoiminto, johon olen tehnyt ulkoasun. Tutoriaali on kokonaisuudessaan responsiivinen.
+    <p  class="leipis">Alla tutoriaalin suoritustoiminto, johon olen tehnyt ulkoasun. Tutoriaali on kokonaisuudessaan responsiivinen.
+      Tutoriaalin yksinkertaiset animaatiot on toteutettu animate.css -kirjastolla.
     </p><br>
     <img src="/img/tutorial.gif" class="uiGif">
     <br>
-    <p>Alla tutoriaalin aloitusikkunan animaation HTML-koodi.</p><br>
+
+    <!---
+     <p>Alla tutoriaalin aloitusikkunan animaation HTML-koodi, joka on toteutettu animate.css -kirjastolla.</p><br>
 
     <script type="text/plain" class="language-markup">
   <h3>Okay, get ready for your first practice!</h3>
@@ -119,7 +126,7 @@
 </script>
     <br>
     <br>
-    <p>Alla HTML-koodi, kun harjoite on suoritettu ja käyttäjän taso nousee.</p><br>
+    <p>Alla HTML-koodi ikkunasta, joka näkyy, kun harjoite on suoritettu ja käyttäjän taso nousee.</p><br>
 
     <script type="text/plain" class="language-markup box">
 
@@ -171,7 +178,8 @@
     </div>
   </script>
     <br>
-    <p>Alla CSS-koodi maskoteille eri tilanteissa. Eri elementit, kuten asusteet ja tassu on rakennettu erillisinä
+-->
+    <p class="leipis">Alla CSS-koodi maskoteille eri tilanteissa. Eri elementit, kuten asusteet ja tassu on rakennettu erillisinä
       kuvina, jotka asetellaan päällekkäin. Päälle, tassulle ja päässä olevalle hatulle on määritetty sama
       wobble-animaatio.</p><br>
 
@@ -224,21 +232,25 @@
     <br>
     <br>
     <h2>Kauppa ja Inventaario</h2> <br>
-    <p>Kauppa ja Inventaario -ikkuna on rakennettu CSS Grid:in avulla. Grid oli minulle ennestään pääpiirteittäin tuttu,
+    <p  class="leipis">Kauppa ja Inventaario -ikkuna on rakennettu CSS Grid:in avulla. Grid oli minulle ennestään pääpiirteittäin tuttu,
       mutta en kokemusta siitä ei pahemmin ollut. Toteutin asettelun ensin Angular Material Gridin avulla, mutta
-      vaihdoin sen tavalliseen Gridiin saadakseni helpomman mahdollisuuden kustomointiin ja responsiivisuuteen.</p><br>
+      vaihdoin sen tavalliseen Gridiin saadakseni helpomman mahdollisuuden kustomointiin ja responsiivisuuteen. Inventaarion Equip-nappi muuttuu sen mukaan, kellä maskotilla on/ei ole esine käytössä.</p><br>
     <img src="/img/kauppa.gif" class="uiGif">
     <br>
-    <p>Alla HTML-koodi inventaarion tavaroista. Equip-nappula näkyy sen mukaan, kellä maskotilla on/ei ole tavaraa
-      käytössä.</p><br>
+
+    <!---
+    <p>Alla HTML-koodi inventaariosta ja kaupasta. Equip-nappula näkyy sen mukaan, kellä maskotilla on/ei ole tavaraa
+      käytössä. Ulkoasu kauppaan ja inventaarioon on tehty samalla menetelmällä.</p><br>
 
     <script type="text/plain" class="language-markup box">
-  <div class="gridContainer">
-    <div class="gridItem" *ngFor="let ownedItem of itemMenuService.ownedGear;">
-      <mat-card-content>
-        <h2>{{ownedItem.itemname}}</h2>
+<!--Inventaario-->
+    <!---
+    <div class="gridContainer">
+      <div class="gridItem" *ngFor="let ownedItem of itemMenuService.ownedGear;">
+        <mat-card-content>
+          <h2>{{ownedItem.itemname}}</h2>
           <img src="{{ownedItem.media}}" class="itemImg">
-            <div *ngIf="this.equipService.equip1?.item === ownedItem?.item">
+          <div *ngIf="this.equipService.equip1?.item === ownedItem?.item">
             <button>Equipped
               <img src="../../assets/img/zac/basicFace/zacBasicFace.svg" class="equipSquirrel">
             </button>
@@ -248,41 +260,36 @@
               <img src="../../assets/img/zoey/basicFace/zoeyBasicFace.svg" class="equipSquirrel">
             </button>
           </div>
-          <button (click)="openInventory(ownedItem)"
-          *ngIf="this.equipService.equip1?.item != ownedItem?.item &&
-          this.equipService.equip2?.item != ownedItem?.item &&
-          this.equipService.hat1?.item != ownedItem?.item &&
-          this.equipService.hat2?.item != ownedItem?.item">Equip</button>
-      </mat-card-content>
+          <button (click)="openInventory(ownedItem)" *ngIf="this.equipService.equip1?.item != ownedItem?.item &&
+        this.equipService.equip2?.item != ownedItem?.item &&
+        this.equipService.hat1?.item != ownedItem?.item &&
+        this.equipService.hat2?.item != ownedItem?.item">Equip</button>
+        </mat-card-content>
+      </div>
     </div>
-  </div>
-</script>
 
-    <br>
-    <p>Alla HTML-koodi kaupasta. Ulkoasu on tehty samalla menetelmällä kuin Inventaariokin. </p><br>
-
-    <script type="text/plain" class="language-markup box">
-  <mat-card class="card shop">
-    <mat-card-title>Shop</mat-card-title>
-    <hr/>
-    <div class="gridContainer">
-      <div class="gridItem" *ngFor="let storeItem of itemMenuService.storeItems; let i = index">
-        <mat-card-content>
-                  <h2>{{storeItem.itemname}}</h2>
+    <!-- Kauppa
+    <mat-card class="card shop">
+      <mat-card-title>Shop</mat-card-title>
+      <hr />
+      <div class="gridContainer">
+        <div class="gridItem" *ngFor="let storeItem of itemMenuService.storeItems; let i = index">
+          <mat-card-content>
+            <h2>{{storeItem.itemname}}</h2>
             <img src="{{storeItem.media}}" class="itemImg">
             <mat-card-subtitle class="price">
               {{storeItem.price}} Acorns
             </mat-card-subtitle>
             <button *ngIf="this?.itemMenuService.notPurchasable[i] === false"
-            (click)="openStoreDialog(this?.user,storeItem)">Buy</button>
+              (click)="openStoreDialog(this?.user,storeItem)">Buy</button>
             <button *ngIf="this?.itemMenuService.notPurchasable[i] === true">
               Not enough acorns</button>
-            <br/>
-        </mat-card-content>
+            <br />
+          </mat-card-content>
+        </div>
       </div>
-    </div>
-</mat-card>
-</script>
+    </mat-card>
+    </script>
 
     <br>
     <p>Alla CSS-koodi Grid-toiminnallisuudesta. </p><br>
@@ -346,18 +353,20 @@ button:hover {
   }    
 }
 </code></pre>
+-->
     <br>
     <h2>Pop Up -ikkunat</h2> <br>
+    <p class="leipis">
+      Pop up -ikkunat on tehty Angular Material -komponenteilla. Tein tyylittelyt ja kuvitukset sekä asettelun ikkunoihin.
+      Koska elementit on tehty Angular material -dialogia käyttäen, tyylittely vaati enemmän olemassaolevien tyylien yliajamista.</p>
     <div class="popUps">
+
       <img src="/img/tutopopup.gif" class="">
       <img src="/img/kauppapopup.gif" class="">
     </div>
 
-
-    <p>Kauppa ja Inventaario -ikkuna on rakennettu CSS Grid:in avulla. Grid oli minulle ennestään pääpiirteittäin tuttu,
-      mutta en kokemusta siitä ei pahemmin ollut. Toteutin asettelun ensin Angular Material Gridin avulla, mutta
-      vaihdoin sen tavalliseen Gridiin saadakseni helpomman mahdollisuuden kustomointiin ja responsiivisuuteen.</p><br>
     <br>
+    <!---
     <p>Alla HTML-koodi Tutorial pop up -ikkunasta. Muut pop up -ikkunat on rakennettu samalla periaatteella.</p><br>
 
     <script type="text/plain" class="language-markup box">
@@ -471,17 +480,24 @@ button:hover {
 }
 
 </code></pre>
+-->
+    <br>
+    <h2>Responsiivisuus</h2> <br>
+    <img src="/img/responsivetutorialpage.gif" class="uiGif">
 
-<br>
-<h2>Responsiivisuus</h2> <br>
-  <img src="/img/responsivetutorialpage.gif" class="uiGif">
+    <br>
+    <p class="leipis">Sovellus on suunniteltu alunperin mobiilille ja responsiivisuuden olen lisännyt jälkeenpäin. Olennaisin muutos
+      nettisivuversiossa on alapalkin siirtyminen yläpalkiksi, sekä erillinen ikkuna, jossa näkyy käyttäjän tärkeimmät
+      tiedot.</p><br>
+    <br>
+    <p class="leipis">Koska ikkuna on tarpeellinen vain Kauppa ja etusivulla, on se lisätty molempien
+      sivujen komponentteihin erikseen. Toteutin ikkunan aluksi yläpalkin komponenttiin, mutta se tuli näkyviin silloin
+      joka ikkunassa, mikä ei ollut tarpeellista. Yläpalkki-komponentissa on kaksi erillistä palkkia, joiden näkyvyys
+      vaihtuu responsiivisesti sivun leveyden
+      mukaan.</p><br>
 
-<br>
-<p>Sovellus on suunniteltu alunperin mobiilille ja responsiivisuuden olen lisännyt jälkeenpäin. Olennaisin muutos nettisivuversiossa on alapalkin siirtyminen yläpalkiksi, sekä erillinen ikkuna, jossa näkyy käyttäjän tärkeimmät tiedot.</p><br>
-<br>
-<p>Alla HTML-koodi Stats-ikkunasta. Koska ikkuna on tarpeellinen vain Kauppa ja etusivulla, on se lisätty molempien sivujen komponentteihin erikseen. Toteutin ikkunan aluksi Yläpalkin komponenttiin, mutta se tuli näkyviin silloin joka ikkunassa, mikä ei ollut tarpeellista.</p><br>
-
-<script type="text/plain" class="language-markup box">
+    <!--
+    <script type="text/plain" class="language-markup box">
 <div class="statsContainer">
   <div class="statsItem span3">
     <img src="../../assets/img/zac/basicFace/zacBasicFace.svg" class="profileImg">
@@ -500,10 +516,10 @@ button:hover {
 </div>
 </script>
 
-<br>
-<p>Stats-ikkunan päämuotoilu ja responsiivisuus.</p><br>
+    <br>
+    <p>Stats-ikkunan päämuotoilu ja responsiivisuus.</p><br>
 
-<pre  class="language-css box"><code>
+    <pre class="language-css box"><code>
   
 .statsContainer {
   position: absolute;
@@ -577,10 +593,11 @@ progress {
 }
 </code></pre>
 
-<br>
-<p>Yläpalkki-komponentissa on kaksi erillistä palkkia, joiden näkyvyys vaihtuu responsiivisesti sivun leveyden mukaan.</p><br>
+    <br>
+    <p>Yläpalkki-komponentissa on kaksi erillistä palkkia, joiden näkyvyys vaihtuu responsiivisesti sivun leveyden
+      mukaan.</p><br>
 
-<script type="text/plain" class="language-markup box">
+    <script type="text/plain" class="language-markup box">
   <mat-toolbar class="topbar" *ngIf="router.url != '/login' && router.url != '/register'">
     <nav class="container">
       <div>{{user?.streak}} <img id="streak" src="../../assets/img/streak.svg"></div>
@@ -600,26 +617,18 @@ progress {
       src="../../assets/img/store.svg">Store</a> </div>
   </nav>
 </mat-toolbar>
-</script>
-<br>
-<br>
-<hr><br>
-<h2>Reflektio</h2> <br>
-<p>Valmis prototyyppi on rakenteeltaan melko samankaltainen kuin
-  varsinainen tuote. Eroavaisuuksia prototyypissä on yksittäiset
-  visuaaliset elementit, kuten ikonit, taustakuva ja varsinaiset
-  tutoriaalinappulat. Lopullisen käyttöliittymän toteutin
-  pääasiassa prototyyppiä mukaillen. Sovelluksen ulkoasu on
-  toteutettu CSS:llä ja jonkin verran Angular Material
-  -elementeillä, jotka olen itse muokannut sovelluksen tyyliin
-  sopivaksi. Olin pääasiallisesti vastuussa sovelluksen
-  visuaalisesta ilmeestä ja tyylittelystä joka komponentissa.</p> <br><br>
-
-
-
+</script> -->
+    <br>
+    <br>
+    <hr><br>
+    <h2>Reflektio</h2> <br>
+    <p class="leipis">Olen oppinut käyttöliittymäsuunnittelusta monipuolisesti. Tutuksi on tullut moni uusi suunnitteluohjelma ja myös
+      esimerkiksi Angular Material -komponentit. Yllä esiteltyjen CSS-animaatioiden lisäksi opettelin myös käyttämään
+      Angularin omaa animaatiokomponenttia sivunvaihtojen fade-animaatioihin. Koen, että olen oppinut
+      käyttöliittymäsuunnittelua tavoitteiden mukaisesti.</p> <br><br>
   </div>
   </div>
-</div>
+  </div>
 
   <footer>
     <p>&copy; HANNE LEHTINEN 2021</p>
