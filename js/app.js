@@ -8,6 +8,8 @@ const navSlide = ()=>{
 }
 navSlide();
 
+
+
 var slideIndex = [1,1];
 /* Class the members of each slideshow group with different CSS classes */
 var slideId = ["mySlides1", "mySlides2", "mySlides3"]
@@ -28,4 +30,15 @@ function showSlides(n, no) {
     x[i].style.display = "none";
   }
   x[slideIndex[no]-1].style.display = "block";
+}
+
+
+// testi
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+    document.getElementById("myImg").className = "slideUp";
+  }
 }

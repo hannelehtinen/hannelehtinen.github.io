@@ -3,10 +3,9 @@
                     Style Sheet
 -------------------------------------------------------
 
-Web Page Development
-Final Assignment
-Portfolio-sivu
-Tekijä: Hanne Lehtinen
+Ticorporate
+Näyteportfolio
+Hanne Lehtinen
 
 -------------------------------------------------------
                     Sisällys   
@@ -15,13 +14,9 @@ Tekijä: Hanne Lehtinen
 1. Navigaatio
 2. Header
 3. Content
-4. Index
-5. Work
-6. bigBoxcation
-7. Skills
-8. Alasivut
-9. Footer
-10. Media screen stuff
+4. img
+5. Footer
+6. Media screen stuff
 
 */
 
@@ -44,29 +39,21 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-background-color: white;}
+background-color: white;
+}
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(-250deg, #ffdee9 0%, #b5fffc 100%);
-
   border-radius: 15px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(-250deg, #ffdfea 0%, #cffffd 100%);}
-
-
-.uiGif {
-  height: 400px;
-  display: block;
-  margin: 0% auto;
+  background-image: linear-gradient(-250deg, #ffdfea 0%, #cffffd 100%);
 }
 
-  /*
-
-
+/*
 ----------------------------------------------------
                     1. Navigaatio
 ----------------------------------------------------
@@ -81,7 +68,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height:60px;
   background-color: #ffdee9;
   background-image: linear-gradient(250deg, #ffdee9 0%, #b5fffc 100%);
   font-family: 'montserrat', sans-serif;
@@ -157,27 +144,34 @@ nav a {
   margin: 5px;
   border-radius: 5px;
 }
-.korvapuustiistai {
-  width: 70%;
-  margin-bottom: 10px;
-}
-/* 
+
+/*
   ----------------------------------------------------
                     2. Header
   ----------------------------------------------------
-  */
+*/
 
 header {
-  height: 50%;
+  height: 100%;
+  width: 100%;
   background-image: url(/img/bg.jpg);
   background-size: cover;
   filter: hue-rotate(360deg) brightness(100%);
-  padding: 300px 20px 20px 20px;
   text-align: end;
-  top: 0vh;
+  align-items: baseline;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
+header h1 {
+  padding: 25% 2% 2% 2%;
+}
+
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 30px
+  }
+  
+}
 h1 {
   color: black;
   padding: 5px;
@@ -187,8 +181,54 @@ h1 {
   font-family: 'montserrat', sans-serif;
 }
 
-.gridContainer,
-.gridContainer2 {
+/*
+  ----------------------------------------------------
+                    3. Content
+  ----------------------------------------------------
+*/
+
+
+.content {
+  padding-bottom: 3em;
+  padding-top: 3em;
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+  line-height: 1.5em;
+}
+
+@media only screen and (max-width: 830px) {
+  .content {
+    margin: 0px !important;
+  }
+  .bigBox {
+    margin: 0px !important;
+  }
+}
+
+h2 {
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.5em;
+  font-family: 'montserrat', sans-serif;
+  margin-top: 2em;
+  line-height: 1.8em;
+  text-align: center;
+}
+.content h3 {
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.5em;
+  font-family: 'montserrat', sans-serif;
+  margin-top: 3em;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+
+.gridContainer, .gridContainer2 {
   display: grid;
   grid-gap: 10px;
   margin: 2%;
@@ -225,88 +265,6 @@ h1 {
   border: white 2px;
 }
 
-.someImg {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: 3px 3px 5px grey;
-}
-
-.getBig, .getMedium, .getMediumBig {
- border-radius: 20px;
-}
-.getBig:hover {
-  transform: scale(2.5, 2.5);
-  transition: 0.9s;
-  transition-timing-function: ease-in-out;
-  z-index: 1;
-}
-
-.getBig:not(:hover) {
-  transform: scale(1, 1);
-  transition: 0.9s ease-in-out;
-}
-
-.getMedium:hover {
-  transform: scale(1.1, 1.1);
-  transition: 0.5s;
-  transition-timing-function: ease-out;
-}
-
-.getMedium:not(:hover) {
-  transform: scale(1, 1);
-  transition: 0.5s ease-in-out;
-}
-.getMediumBig:hover {
-  transform: scale(1.5, 1.5);
-  transition: 0.5s;
-  transition-timing-function: ease-out;
-}
-
-.getMediumBig:not(:hover) {
-  transform: scale(1, 1);
-  transition: 0.5s ease-in-out;
-}
-
-/*
-  ----------------------------------------------------
-                    3. Content
-  ----------------------------------------------------
-*/
-
-.content {
-  padding-bottom: 3em;
-  padding-top: 3em;
-  max-width: 1000px;
-  margin: auto;
-  padding: 30px;
-  line-height: 1.5em;
-}
-h2 {
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 1.5em;
-  font-family: 'montserrat', sans-serif;
-  margin-top: 2em;
-  line-height: 1.8em;
-}
-
-h2 {
-  text-align: center;
-}
-
-.content h3 {
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 1.5em;
-  font-family: 'montserrat', sans-serif;
-  margin-top: 3em;
-  line-height: 1.8em;
-  text-align: center;
-}
-
 dt {
   color: black;
   text-transform: uppercase;
@@ -314,9 +272,10 @@ dt {
   font-size: 1em;
   font-family: 'montserrat', sans-serif;
   margin-bottom: 0.5em;
+  margin-top: 20px;
 }
-p,
-dd {
+
+p, dd {
   font-family: 'hind', sans-serif;
   font-size: 1em;
   line-height: 1.5em;
@@ -329,84 +288,6 @@ p {
 .leipis {
   width: 90%;
   margin: auto;
-}
-dt {
-  margin-top: 20px;
-}
-
-.ang {
-  width: 11%;
-  float: right;
-  margin: 1%;
-}
-
-.css {
-  width:10%;
-  float: left;
-  margin: 2%;
-}
-.img {
-  width: 100%;
-}
-
-.icons {
-  width: 60%;
-  margin-left: 20%;
-}
-
-/* OOF*/
-
-* {
-  box-sizing: border-box;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  width: 95%;
-  max-width: 1000px;
-  position: relative;
-  margin: 0%;
-  background-color: white;
-  height: 500px;
-}
-
-.slidePhoto {
-  height: 400px;
-}
-/* Hide the images by default */
-.mySlides1,
-.mySlides2 {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: rgb(228, 228, 228);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(117, 117, 117, 0.8);
 }
 
 .box {
@@ -469,53 +350,100 @@ dt {
   }
 }
 
-/* 
-  ----------------------------------------------------
-                    4. Index
-  ----------------------------------------------------
-  */
 
-#me {
-  width: 30%;
-  float: right;
-  padding: 1%;
-  margin: 2%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+/*
+  ----------------------------------------------------
+                    4. Images
+  ----------------------------------------------------
+*/
+.korvapuustiistai {
+  width: 70%;
+  margin-bottom: 10px;
 }
 
-/* 
-  ----------------------------------------------------
-                    5. Work
-  ----------------------------------------------------
-  */
-
-.wvasen {
-  float: left;
-}
-
-.woikea {
-  float: right;
-}
-
-.woikea,
-.wvasen {
+.someImg {
+  width: 100%;
   height: 100%;
-  width: 49%;
-  margin-bottom: 1.5em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-  padding: 0.5em;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px grey;
 }
-.work p,
-.work p,
-.work h2,
-.work h3 {
-  text-align: left;
+
+
+.ang {
+  width: 11%;
+  float: right;
+  margin: 1%;
 }
-/* 
-  ----------------------------------------------------
-                    6. bigBoxcation
-  ----------------------------------------------------
-  */
+
+.css {
+  width:10%;
+  float: left;
+  margin: 2%;
+}
+
+.uiGif {
+  height: 400px;
+  display: block;
+  margin: 0% auto;
+}
+
+.img {
+  width: 100%;
+}
+
+.icons {
+  width: 60%;
+  margin-left: 20%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 95%;
+  max-width: 1000px;
+  position: relative;
+  margin: 0%;
+  background-color: white;
+  height: 500px;
+}
+
+.slidePhoto {
+  height: 400px;
+}
+/* Hide the images by default */
+.mySlides1,
+.mySlides2 {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(228, 228, 228);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(117, 117, 117, 0.8);
+}
 
 .bigBox div {
   padding: 2%;
@@ -533,15 +461,6 @@ dt {
   margin-top: 0.5em;
   text-align: center;
 }
-/* 
-  ----------------------------------------------------
-                    7. Skills
-  ----------------------------------------------------
-  */
-
-.skills img {
-  width: 100%;
-}
 
 table {
   padding: 20px;
@@ -552,30 +471,19 @@ td {
   padding: 10px;
 }
 
-/* 
-  ----------------------------------------------------
-                    8. Projects
-  ----------------------------------------------------
-  */
-
-.clearfix::after {
-  content: '';
-  clear: both;
-  display: table;
-}
-
-.vasen {
-  float: left;
-  height: 100%;
-  width: 45%;
-  margin-bottom: em;
-}
-
 .kuvaOverlay {
   float: right;
   position: relative;
   width: 30%;
   margin: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .kuvaOverlay {
+    float: none;
+    position: relative;
+    width: 40%;
+  }
 }
 
 .kuvaOverlay:hover .img {
@@ -589,11 +497,9 @@ td {
 
 }
 
-
 .kuvaOverlay:hover .middle {
   opacity: 1;
   transition: .5s ease;
-
 }
 
 .middle {
@@ -607,41 +513,11 @@ td {
   text-align: center;
 }
 
-
 .borders {
   border: white 10px solid;
   box-shadow: 2px 4px 2px -2px rgba(0, 0, 0, 0.2);
   margin-bottom: 0px;
   
-}
-.oikea {
-  float: right;
-  height: 100%;
-  width: 45%;
-  margin-bottom: 1.5em;
-}
-
-.vasen_kuva {
-  padding-top: 1.5em;
-  float: left;
-  padding-right: 1.5em;
-  filter: saturate(80%);
-}
-
-.oikea_kuva {
-  padding-top: 1.5em;
-  float: right;
-}
-
-.container2 {
-  position: relative;
-  z-index: 1;
-}
-
-.projectimg {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .overlay {
@@ -655,57 +531,43 @@ td {
   background: blue;
 }
 
-.container2:hover .overlay {
-  opacity: 0.85;
-}
 
-.overlaytext {
-  font-family: 'hind', sans-serif;
-  font-size: 1em;
-  color: black;
-  position: absolute;
-  top: 60%;
-  left: 56%;
-  width: 90%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -90%);
-  transform: translate(-60%, -50%);
-  text-align: center;
-}
-
-/* 
-  ----------------------------------------------------
-                    8. Alasivut
-  ----------------------------------------------------
-  */
-
-.alasivupix {
-  width: 100%;
-}
-.kuva_zoom {
-  margin: 2em;
-}
-
-.kuva_zoom img {
-  transition: 0.5s ease;
-}
-
-.kuva_zoom:hover img {
-  transform: scale(1.05);
-}
-
-a {
-  text-decoration: none;
-}
-
-.alalinx h1:hover {
-  font-weight: bold;
-  color: #636363;
-}
-
-.slider-outer {
-  padding: 100px 0px;
-}
+.getBig, .getMedium, .getMediumBig {
+  border-radius: 20px;
+ }
+ .getBig:hover {
+   transform: scale(2.5, 2.5);
+   transition: 0.9s;
+   transition-timing-function: ease-in-out;
+   z-index: 1;
+ }
+ 
+ .getBig:not(:hover) {
+   transform: scale(1, 1);
+   transition: 0.9s ease-in-out;
+ }
+ .getMediumBig:hover {
+   transform: scale(1.5, 1.5);
+   transition: 0.5s;
+   transition-timing-function: ease-out;
+ }
+ 
+ .getMediumBig:not(:hover) {
+   transform: scale(1, 1);
+   transition: 0.5s ease-in-out;
+ }
+ 
+ .getMedium:hover {
+   transform: scale(1.1, 1.1);
+   transition: 0.5s;
+   transition-timing-function: ease-out;
+ }
+ 
+ .getMedium:not(:hover) {
+   transform: scale(1, 1);
+   transition: 0.5s ease-in-out;
+ }
+ 
 
 /* 
   ----------------------------------------------------
@@ -758,22 +620,21 @@ footer {
   ----------------------------------------------------
   */
 
-@media screen and (max-width: 830px) {
+@media only screen and (max-width: 830px) {
   .nav {
-    position: fixed;
+    display: none;
   }
   .navig {
     position: absolute;
     right: 0px;
     height: 60vh;
     top: -60vh;
-    background-color: #ffdee9;
-    background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+    background-color: #ffffff;
     flex-direction: column;
     align-items: center;
     width: 100%;
     transform: translateY(0%);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.3s ease-in-out;
   }
   .navig li {
     opacity: 100%;
@@ -785,6 +646,7 @@ footer {
   header {
     text-align: end;
     height: 30%;
+    width: 100%;
   }
   .wvasen,
   .woikea {
@@ -795,7 +657,8 @@ footer {
   }
   .nav-active {
     transform: translateY(100%);
-    margin-top: 42px;
+    margin-top: 60px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
   }
   .vasen_kuva,
   .oikea_kuva {
