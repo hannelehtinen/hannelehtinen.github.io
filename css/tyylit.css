@@ -300,6 +300,12 @@ p {
   align-content: center;
   justify-content: space-evenly;
 }
+
+@media  screen and (max-width: 750px) {
+  .popUps {
+    display: block;
+  }
+}
 /* Caption text */
 .text {
   color: black;
@@ -383,9 +389,13 @@ p {
 }
 
 .uiGif {
-  height: 400px;
+  max-height: 400px;
   display: block;
   margin: 0% auto;
+}
+
+.levee {
+width: 95%;
 }
 
 .img {
@@ -400,7 +410,6 @@ p {
 /* Slideshow container */
 .slideshow-container {
   width: 95%;
-  max-width: 1000px;
   position: relative;
   margin: 0%;
   background-color: white;
@@ -415,7 +424,20 @@ p {
 .mySlides2 {
   display: none;
 }
+.mobileImg {
+  display: none;
+}
 
+@media  screen and (max-width: 1000px) {
+  .slideshow-container {
+    display: none;
+  }
+  .mobileImg {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+  }
+}
 /* Next & previous buttons */
 .prev,
 .next {
@@ -478,7 +500,7 @@ td {
   width: 30%;
   margin: 0px;
 }
-#mobile {
+.mobile {
   visibility: collapse;
 }
 
@@ -488,10 +510,10 @@ td {
     width: 90%;
     padding: 50px;
   }
-  #mobile {
+  .mobile {
     visibility: visible;
   }
-  #desktop {
+  .desktop {
     visibility: collapse;
   }
 }
@@ -540,10 +562,6 @@ td {
   background: blue;
 }
 
-
-.getBig, .getMedium, .getMediumBig {
-  border-radius: 20px;
- }
  .getBig:hover {
    transform: scale(2.5, 2.5);
    transition: 0.9s;

@@ -18,7 +18,7 @@
 <body>
 
   <nav>
-    <div class="logo"><a href="#">
+    <div class="logo"><a href="index.html">
         <h3>Hanne Lehtinen</h3>
       </a>
     </div>
@@ -38,7 +38,7 @@
   </nav>
 
   <header>
-    <h1>Käyttöliittymä</h1>
+    <h1>UI/UX</h1>
   </header>
 
   <div class="content bigBox">
@@ -86,12 +86,18 @@
       <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
     </div>
     <!-- Slideshow container ends-->
-
+    <img src="/img/propro.png" class="mobileImg getMedium">
+    <p>Ensimmäinen prototyyppi (Adobe XD)</p> <br>
+    <img src="/img/oldproto.png" class="mobileImg getMedium">
+    <p>Prototyyppiluonnos (Procreate)</p> <br>
+    <img src="/img/proto.png" class="mobileImg getMedium">
+    <p>Lopullinen prototyyppi (Adobe XD)</p><br>
 
 
   </div>
   <div class="content bigBox">
-    <h2>käyttöliittymäsuunnittelu</h2> <br>
+    <h2 class="desktop">käyttöliittymäsuunnittelu</h2>
+    <h2 class="mobile">käyttöliittymä- <br>suunnittelu</h2> <br> <br>
     <p class="leipis">Valmis prototyyppi on rakenteeltaan melko samankaltainen kuin
       varsinainen tuote. Eroavaisuuksia prototyypissä on yksittäiset
       visuaaliset elementit, kuten ikonit, taustakuva ja varsinaiset
@@ -236,7 +242,7 @@
     <p  class="leipis">Kauppa ja Inventaario -ikkuna on rakennettu CSS Grid:in avulla. Grid oli minulle ennestään pääpiirteittäin tuttu,
       mutta en kokemusta siitä ei pahemmin ollut. Toteutin asettelun ensin Angular Material Gridin avulla, mutta
       vaihdoin sen tavalliseen Gridiin saadakseni helpomman mahdollisuuden kustomointiin ja responsiivisuuteen. Inventaarion Equip-nappi muuttuu sen mukaan, kellä maskotilla on/ei ole esine käytössä.</p><br>
-    <img src="/img/kauppa.gif" class="uiGif">
+    <img src="/img/kauppa.gif" class="uiGif levee">
     <br>
 
     <!---
@@ -362,8 +368,8 @@ button:hover {
       Koska elementit on tehty Angular material -dialogia käyttäen, tyylittely vaati enemmän olemassaolevien tyylien yliajamista.</p>
     <div class="popUps">
 
-      <img src="/img/tutopopup.gif" class="">
-      <img src="/img/kauppapopup.gif" class="">
+      <img src="/img/tutopopup.gif" class="levee">
+      <img src="/img/kauppapopup.gif" class="levee">
     </div>
 
     <br>
@@ -484,7 +490,7 @@ button:hover {
 -->
     <br>
     <h2>Responsiivisuus</h2> <br>
-    <img src="/img/responsivetutorialpage.gif" class="uiGif">
+    <img src="/img/responsivetutorialpage.gif" class="uiGif levee">
 
     <br>
     <p class="leipis">Sovellus on suunniteltu alunperin mobiilille ja responsiivisuuden olen lisännyt jälkeenpäin. Olennaisin muutos
