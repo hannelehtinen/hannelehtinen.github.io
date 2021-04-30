@@ -152,7 +152,6 @@ nav a {
 */
 
 header {
-  height: 100%;
   width: 100%;
   background-image: url(/img/bg.jpg);
   background-size: cover;
@@ -160,6 +159,7 @@ header {
   text-align: end;
   align-items: baseline;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  min-height: 30%;
 }
 
 header h1 {
@@ -168,10 +168,11 @@ header h1 {
 
 @media screen and (max-width: 400px) {
   header h1 {
-    font-size: 30px
-  }
-  
+    font-size: 30px;
+    padding: 35% 2% 2% 2%;
+  } 
 }
+
 h1 {
   color: black;
   padding: 5px;
@@ -477,12 +478,21 @@ td {
   width: 30%;
   margin: 0px;
 }
+#mobile {
+  visibility: collapse;
+}
 
 @media screen and (max-width: 600px) {
   .kuvaOverlay {
     float: none;
-    position: relative;
-    width: 40%;
+    width: 90%;
+    padding: 50px;
+  }
+  #mobile {
+    visibility: visible;
+  }
+  #desktop {
+    visibility: collapse;
   }
 }
 
@@ -494,7 +504,6 @@ td {
 .kuvaOverlay:not(:hover) .img{
   opacity: 1;
   transition: .5s ease;
-
 }
 
 .kuvaOverlay:hover .middle {
@@ -642,31 +651,12 @@ footer {
   .burger {
     display: block;
   }
-
-  header {
-    text-align: end;
-    height: 30%;
-    width: 100%;
-  }
-  .wvasen,
-  .woikea {
-    width: 90%;
-    float: none;
-    margin: auto;
-    margin-bottom: 5%;
-  }
   .nav-active {
     transform: translateY(100%);
     margin-top: 60px;
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
   }
-  .vasen_kuva,
-  .oikea_kuva {
-    width: 350px;
-    float: none;
-    margin: auto;
-    margin-bottom: 5%;
-  }
+
   .container2 img {
     width: 400px;
   }
