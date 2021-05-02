@@ -251,7 +251,6 @@ h2 {
 
 .gridItem {
   display: flex;
-  border-radius: 15px;
   align-items: center;
   flex-direction: column;
   padding: 5%;
@@ -283,7 +282,7 @@ p, dd {
 }
 
 p {
-  text-align: center;
+  text-align: justify;
 }
 
 .leipis {
@@ -389,7 +388,6 @@ p {
 }
 
 .uiGif {
-  max-height: 400px;
   display: block;
   margin: 0% auto;
 }
@@ -497,7 +495,7 @@ td {
 .kuvaOverlay {
   float: right;
   position: relative;
-  width: 30%;
+  width: 25%;
   margin: 0px;
 }
 .mobile {
