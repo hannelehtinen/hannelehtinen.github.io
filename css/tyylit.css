@@ -388,6 +388,7 @@ p {
 }
 
 .uiGif {
+  width: 100%;
   display: block;
   margin: 0% auto;
 }
@@ -698,5 +699,8 @@ footer {
 
   header {
     text-align: end;
+  }
+  p {
+    text-align: left;
   }
 }
