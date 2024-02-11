@@ -1,3 +1,3 @@
 # hannelehtinen.github.io
 https://hannelehtinen.github.io/ 
-Näyteportfolio Ticorporate Demo Lab -kurssille
+Portfolio Ticorporate Demo Lab -kurssille
