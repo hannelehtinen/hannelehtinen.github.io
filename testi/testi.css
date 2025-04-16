@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 :root {
   --font-size-small: 1.7em;
   --font-size-normal: 2.2rem;
@@ -24,6 +30,33 @@
   --gutter-small-1: 2.5rem;
   --gutter-small: 2rem;
   --border-light: 1px solid rgb(36, 35, 35);
+}
+
+html {
+  font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 52%;
+  }
+}
+
+body {
+  font-size: var(--font-size-small);
+  font-family: var(--font-stack);
+  font-weight: 400;
+  color: var(--white);
+  line-height: var(--line-height-normal);
+  background: var(--black);
+  overflow-x: hidden;
+}
+
+.row {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
 }
 
 .gallery {
@@ -104,12 +137,13 @@
 
 nav {
   position: fixed;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   z-index: 2;
   margin-bottom: var(--gutter-huge);
   padding: var(--gutter-normal);
+  background-color: var(--black);
 }
 
 .nav__items {
@@ -176,13 +210,13 @@ nav {
 }
 
 .navig a {
-  color: black;
+  color: var(--white);
   text-align: center;
   padding: 5px;
   text-transform: uppercase;
 }
 
-.navig.nav__item:not(:last-child) {
+.navig .nav__item:not(:last-child) {
   margin-right: 0px;
 }
 
@@ -220,7 +254,7 @@ nav {
     right: 0px;
     height: 60vh;
     top: -60vh;
-    background-color: var(--white);
+    background-color: var(--black);
     flex-direction: column;
     align-items: center;
     width: 100%;
