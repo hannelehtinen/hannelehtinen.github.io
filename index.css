@@ -330,13 +330,13 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Navigation ----- */
 /* --------------------------------------- */
 
-.nav {
+
+nav {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  z-index: 2;
   padding: var(--gutter-normal);
-  width: 95%;
-  margin-bottom: var(--gutter-huge);
 }
 
 .nav__items {
@@ -395,6 +395,68 @@ body:not(.user-is-tabbing) a:focus {
   background: var(--pink);
 }
 
+.navig {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  list-style-type: none;
+  z-index: 2;
+}
+
+.navig a {
+  color: var(--white);
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+.navig .nav__item:not(:last-child) {
+  margin-right: 0px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: var(--white);
+  margin: 5px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 830px) {
+  .nav {
+    display: none;
+  }
+  .navig {
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: -100vh;
+    background-color: #0a0a0af1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateY(0%);
+    transition: transform 0.2s ease-in;
+  }
+  .navig li {
+    opacity: 100%;
+  }
+  .burger {
+    display: block;
+    z-index: 3;
+  }
+  .nav-active {
+    transform: translateY(100%);
+    margin-top: 0px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+
 /* --------------------------------------- */
 /* ----- Header ----- */
 /* --------------------------------------- */
@@ -403,7 +465,7 @@ body:not(.user-is-tabbing) a:focus {
   background: url("images/header.png");
   background-size: cover;
   background-position: bottom;
-  height: 110vh;
+  height: 130vh;
 }
 
 .hero {
@@ -434,6 +496,7 @@ body:not(.user-is-tabbing) a:focus {
   flex: 1;
   margin: 5rem;
   width: 100%;
+  max-width: 30rem;
 }
 
 .hero img {
@@ -444,6 +507,9 @@ body:not(.user-is-tabbing) a:focus {
   margin-top: 2rem;
 }
 @media (max-width: 700px) {
+  .header__main {
+    height: 100vh;
+  }
   .hero {
     align-items: flex-end;
     flex-direction: column;
@@ -470,7 +536,6 @@ body:not(.user-is-tabbing) a:focus {
 
 @media (max-width: 900px) {
   .project__box {
-    align-items: initial;
     flex-direction: column-reverse;
   }
 }
@@ -521,6 +586,7 @@ body:not(.user-is-tabbing) a:focus {
 .project__image-box {
   margin-bottom: var(--gutter-normal);
   transition: all 0.5s;
+  max-width: 500px;
 }
 
 .project__code:hover,
