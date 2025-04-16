@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="testi.css">
+    <title>Image Gallery with Lightbox</title>
+</head>
+<body>
+    <nav>
+        <a href="#top" class="nav__logo">hanne <span class="nav__bold">lehtinen</span></a>
+        </div>
+        <ul class="navig">
+            <li class="nav__item"><a href="#projektit" class="nav__link">Projektit</a></li>
+            <li class="nav__item"><a href="#koulutustyökokemus" class="nav__link">Koulutus & Työkokemus</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">Kuka olen?</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Ota yhteyttä</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8" alt="Description of Image 1" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1458668383970-8ddd3927deed" alt="Description of Image 2" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf" alt="Description of Image 3" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1466970601638-4e5fb6556584" alt="Description of Image 4" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027" alt="Description of Image 5" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e" alt="Description of Image 6" class="gallery-item">
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <div class="arrow left-arrow">&#10094</div>
+<div class="arrow right-arrow">&#10095</div>
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+
+
+
+
+    <script src="testi.js"></script>
+</body>
+</html>

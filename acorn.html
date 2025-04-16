@@ -1,19 +1,3 @@
-<!-- 
-  Hello 😊.
-
-  This template is designed and developed by Nisar Hassan Naqvi
-  for anyone to use for free or customize the way they like.
-
-  Github Repo: https://github.com/nisarhassan12/portfolio-template/
-  My Website: https://nisar.dev
-
-  For business & inquires, contact me => syednisarhassan12@gmail.com
--->
-
-<!--
-  Follow the instructions written in comments to create your stunning portfolio
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-  <!-- Put your site title here -->
   <title>
-    Hanne Lehtinen | ui/ux <br> graphic designer
+    Hanne Lehtinen | Designer
   </title>
 
   <meta name="description" content="Add small description of yourslef.">
@@ -39,123 +23,105 @@
 <body>
 
   <!-- ***** Header ***** -->
-
   <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <span>acorn</span>
-        </h1>
-      </div>
-    </div>
-  </header>
+    <nav class="nav" role="navigation">
+      <a href="/index.html" class="nav__logo">hanne <span class="nav__bold">lehtinen</span></a>
+      <ul class="nav__items">
+        <li class="nav__item"><a href="/#projektit" class="nav__link">Projektit</a></li>
+        <li class="nav__item"><a href="/#koulutustyökokemus" class="nav__link">Koulutus & Työkokemus</a></li>
+        <li class="nav__item"><a href="/#about" class="nav__link">Kuka olen?</a></li>
+        <li class="nav__item"><a href="/#contact" class="nav__link">Ota yhteyttä</a></li>
+      </ul>
 
-  <main role="main">
-    <!-- ***** About ***** -->
+    </nav>
+       <div class="row">
+      <div class="hero">
+        <div class="project__page">
+          <h1 class="heading-primary">
+            acorn
+          </h1>
+          <p class="title">Sovelluskehitysprojekti</p>
+          <p> UI/UX-designer / Graafikko / Somemarkkinointivastaava / Scrum master
+          </p>
+          <p>
+            Työskentelin projektin parissa vuonna 2021 osana tietojenkäsittelyn opintoja. Acorn on pelillistetty kitaratutoriaalisovellus, joka opettaa kitaransoittoa käytännössä sekä teoriassa. </p> <p>
+Toimin projektissa UI/UX-suunnittelijana, graafikkona, somemarkkinointivastaavana sekä Scrum Masterina. Toteutin sovellukselle prototyypin, kaiken grafiikan sekä sosiaalisen median sisältöä. </p> <p>
+Scrum Masterina opin paljon organisoinnista, ryhmän vetämisestä sekä toimivan projektinhallinnan tärkeydestä.
+            </p>
+          </p>
+        </div>
 
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>Työskentelin projektin parissa vuonna 2021 osana tietojenkäsittelyn opintoja. Acorn on pelillistetty kitaratutoriaalisovellus, joka opettaa kitaransoittoa käytännössä sekä teoriassa. </p>
-<p>
-  Toimin projektissa UI/UX-suunnittelijana, graafikkona, somemarkkinointivastaavana sekä Scrum Masterina. Toteutin sovellukselle prototyypin, kaiken grafiikan sekä sosiaalisen median sisältöä.
-
-</p>
-              <p>
-              Scrum Masterina opin paljon organisoinnista, ryhmän vetämisestä sekä toimivan projektinhallinnan tärkeydestä. </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
-          </div>
+        <div class="hero__image-box">
+          <img src="./images/acorn.png" class="hero__image" alt="hanne lehtinen" />
+          <a href="https://www.instagram.com/acorn_tc/" class="btn btn--pink">Instagram</a>
         </div>
       </div>
-    </section>
-  </main>
+  </header>
 
-  <!-- ***** Contact ***** -->
+  <section class="row">
+  <h2>Galleria</h2>
+    <div class="gallery">
+      <img src="../images/projektit/acorn_evoluutio.png" alt="Description of Image 1" class="gallery-item">
+      <img src="../images/projektit/acorn_items.png" alt="Description of Image 2" class="gallery-item">
+      <img src="../images/projektit/acorn_kuva.png" alt="Description of Image 3" class="gallery-item">
+      <img src="../images/projektit/acorn_treenikämppä.png" alt="Description of Image 4" class="gallery-item">
+      <img src="../images/projektit/zac_acorn.png" alt="Description of Image 5" class="gallery-item">
+      <img src="../images/projektit/zoey_acorn.png" alt="Description of Image 6" class="gallery-item">
+      <img src="images/projektit/f77dd7_0966142c312342219686e00fd9ad509f~mv2.gif" alt="Description of Image 6" class="gallery-item">
+      <img src="images/projektit/f77dd7_9d88d7adde714a078cfa823b61c14d85~mv2.gif" alt="Description of Image 6" class="gallery-item">
+      <img src="images/projektit/f77dd7_d3106f875c5c452ca68cef33a309909b~mv2.gif" alt="Description of Image 6" class="gallery-item">
+      <img src="images/projektit/f77dd7_f1fda0690eb041769f5d2dd130af02f3~mv2.gif" alt="Description of Image 6" class="gallery-item">
+  </div>
 
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
-        </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+  <div id="lightbox" class="lightbox">
+      <div class="arrow left-arrow">&#10094</div>
+<div class="arrow right-arrow">&#10095</div>
+      <span class="close">&times;</span>
+      <div class="lightbox-inner">
+             <img class="lightbox-content" id="lightbox-img">
+      <div id="caption"></div> 
       </div>
+
     </div>
   </section>
+
+        <!-- ***** Muut projektit ***** -->
+
+        <section class="other__projects" id="other__project">
+          <div class="row">
+            <h2>Muut projektit</h2>
+            <div class="project__logos">
+              <!-- Add logos of the projects or companies you'have projected with. -->
+               <a href="/riemuverkkokauppa.html">              <img src="./images/riemuverkkokauppa.png" class="project__logo" alt="Company 2" />
+               </a>
+               <a href="/apunalle.html">              
+                <img src="./images/apunalle.png" class="project__logo" alt="Company 3" />
+               </a>
+               <a href="/paunolantila.html">
+              <img src="./images/paunolantila.png" class="project__logo" alt="Company 1" />
+               </a>
+               <a href="/acorn.html">
+                <img src="./images/acorn.png" class="project__logo" alt="Company 1" />
+              </a>
+            </div>
+          </div>
+        </section>
+
 
   <!-- ***** Footer ***** -->
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-      </ul>
-
+        <a href="index.html" class="nav__logo">hanne <span class="nav__bold">lehtinen</span></a>
       <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+        &copy; 2025 - Hanne Lehtinen. Template developed by <a href="https://nisar.dev" class="link">Nisar</a>.
       </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
     </div>
   </footer>
 
   <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
   </a>
   <script src="./index.js"></script>
 </body>

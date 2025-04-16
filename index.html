@@ -39,20 +39,39 @@
 
 <body>
 
+
+
   <!-- ***** Header ***** -->
 
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <a href="#top" class="nav__logo">hanne <span class="nav__bold">lehtinen</span></a>
-        <ul class="nav__items">
+  <header class="header header__main" role="banner" id="top">
+    <nav>
+      <a href="#top" class="nav__logo">hanne <span class="nav__bold">lehtinen</span></a>
+      </div>
+      <ul class="navig">
           <li class="nav__item"><a href="#projektit" class="nav__link">Projektit</a></li>
           <li class="nav__item"><a href="#koulutustyökokemus" class="nav__link">Koulutus & Työkokemus</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Taidot</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">Kuka olen?</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Ota yhteyttä</a></li>
-        </ul>
-      </nav>
+      </ul>
+      <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+  </nav>
 
+
+    <!-- <nav class="nav" role="navigation">
+      <a href="#top" class="nav__logo">hanne <span class="nav__bold">lehtinen</span></a>
+      <ul class="nav__items">
+        <li class="nav__item"><a href="#projektit" class="nav__link">Projektit</a></li>
+        <li class="nav__item"><a href="#koulutustyökokemus" class="nav__link">Koulutus & Työkokemus</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">Kuka olen?</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Ota yhteyttä</a></li>
+      </ul>
+    </nav> -->
+    
+       <div class="row">
       <div class="hero">
         <div class="hero__text">
           <p class="title">ui/ux <br> graphic</p>
@@ -62,16 +81,11 @@
           <p> hanne <span class="nav__bold">lehtinen</span>
             <br>luova <span class="nav__bold">suunnittelija</span>
           </p>
-          <p>
-            Opiskelen tietojenkäsittelyä Jyväskylän ammattikorkeakoulussa. Olen erikoistunut UI/UX-suunnitteluun,
-            graafiseen suunnitteluun ja grafiikkaan. Lisäksi minulla on kokemusta 3D-mallintamisesta, animoinnista ja
-            sosiaalisen median markkinoinnista.
-          </p>
         </div>
 
         <div class="hero__image-box">
-          <img src="./images/hannelehtinen.png" class="hero__image" alt="hanne lehtinen" />
-          <a href="#contact" class="btn btn--pink">CV</a>
+          <img src="./images/Untitled design.png" class="hero__image" alt="hanne lehtinen" />
+          <a href="#contact" class="btn btn--pink">Ota yhteyttä</a>
         </div>
       </div>
   </header>
@@ -87,100 +101,77 @@
 
           <div class="project__box">
             <div class="project__text">
-              <h3><span id="number">01/</span> acorn</h3>
+              <h3><span id="number">01/</span> riemu finland ry:n verkkokauppa</h3>
+              <p class="title">UI/UX-designer / Wordpress-kehittäjä / Sisällöntuottaja</p>
+              <p>Wordpress-projekti</p>
+              <div class="project__links">
+                <a href="/riemuverkkokauppa.html" target="_blank" class="link__text">
+                  Lue lisää <span>&rarr;</span></a>
+                <a href="https://riemufinland.fi/verkkokauppa/" title="Riemu Finland Verkkokauppa" target="_blank" class="link__text"> 
+                   Linkki verkkokauppaan
+                </a>
+              </div>
+            </div>
+            <div class="project__image-box">
+              <img src="./images/riemuverkkokauppa.png" class="project__image" alt="acorn" />
+            </div>
+          </div>
+
+          <div class="project__box">
+            <div class="project__text">
+              <h3><span id="number">02/</span> apunalle-kampanja </h3>
+              <p class="title">Graafikko</p>
+              <p>Kampanjaprojekti</p>
+              <div class="project__links">
+                <a href="/apunalle.html" target="_blank" class="link__text">
+                  Lue lisää <span>&rarr;</span></a>
+                  <a href="https://riemufinland.fi/apunalle/" title="Apunalle" target="_blank" class="link__text"> 
+                    Linkki kampanjan sivuille
+                 </a>
+              </div>
+            </div>
+            <div class="project__image-box">
+              <img src="./images/apunalle.png" class="project__image" alt="acorn" />
+            </div>
+          </div>
+
+          <div class="project__box">
+            <div class="project__text">
+              <h3><span id="number">03/</span> paunolan tilan verkkokauppa</h3>
+              <p class="title">UI/UX-designer</p>
+              <p>Opinnäytetyö</p>
+              <div class="project__links">
+                <a href="/paunolantila.html" target="_blank" class="link__text">
+                  Lue lisää <span>&rarr;</span></a>
+                  <a href="https://urn.fi/URN:NBN:fi:amk-2023120735230" title="Opinnäytetyö" target="_blank" class="link__text"> 
+                    Linkki opinnäytetyöhön
+                 </a>
+              </div>
+            </div>
+            <div class="project__image-box">
+              <img src="./images/paunolantila.png" class="project__image" alt="acorn" />
+            </div>
+          </div>
+
+          <div class="project__box">
+            <div class="project__text">
+              <h3><span id="number">04/</span> acorn</h3>
               <p class="title">UI/UX-designer / Graafikko / Somemarkkinointivastaava / Scrum master</p>
               <p>Sovelluskehitysprojekti</p>
               <div class="project__links">
-                <a href="/portfolio-template/acorn.html" target="_blank" class="link__text">
+                <a href="/acorn.html" target="_blank" class="link__text">
                   Lue lisää <span>&rarr;</span></a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="project__code" alt="GitHub">
-                </a>
               </div>
-
             </div>
             <div class="project__image-box">
               <img src="./images/acorn.png" class="project__image" alt="acorn" />
             </div>
           </div>
 
-          <div class="project__box">
-            <div class="project__text">
-              <h3><span id="number">02/</span> acorn</h3>
-              <p class="title">UI/UX-designer / Graafikko / Somemarkkinointivastaava / Scrum master</p>
-              <p>Sovelluskehitysprojekti</p>
-              <div class="project__links">
-                <a href="/portfolio-template/acorn.html" target="_blank" class="link__text">
-                  Lue lisää <span>&rarr;</span></a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="project__code" alt="GitHub">
-                </a>
-              </div>
-
-            </div>
-            <div class="project__image-box">
-              <img src="./images/acorn.png" class="project__image" alt="acorn" />
-            </div>
-          </div>
-
-          <div class="project__box">
-            <div class="project__text">
-              <h3>Calculator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="project__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="project__links">
-                <a href="#" class="nav__link">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="project__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="project__image-box">
-              <img src="./images/project-2.png" class="project__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="project__box">
-            <div class="project__text">
-              <h3>Notificator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="project__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="project__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="project__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="project__image-box">
-              <img src="./images/project-3.png" class="project__image" alt="Project 3" />
-            </div>
-          </div>
         </div>
       </div>
     </section>
+    <section class="block"></section>
 
 
     <!-- ***** Koulutus & Työkokemus ***** -->
@@ -222,8 +213,7 @@
             <p class="title">tieojenkäsittelyn tradenomi</p>
             <p>
               Erikoistuminen UI/UX-suunnitteluun, graafiseen suunnitteluun ja grafiikkaan (2D & 3D). Opinnoista
-              suoritettu 185/210op (88 %). Keskiarvo 4,2/5. Opinnäytetyön aiheena verkkokaupan käytettävyys, arvosana
-              5.
+              suoritettu 185/210op (88 %). Keskiarvo 4,2/5.
             </p>
           </div>
           <div class="timeline-middle">
@@ -322,25 +312,6 @@
       </div>
     </section>
 
-
-
-    <!-- ***** Clients ***** -->
-
-    <section class="client" id="clients">
-      <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have projected with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
-        </div>
-      </div>
-    </section>
-
     <!-- ***** About ***** -->
 
     <section class="about" id="about">
@@ -350,15 +321,14 @@
           <div class="about__text">
             <!-- Replace the below paragraph with info about yourself -->
             <p>
-              hanne lehtinen<br>
-              luova suunnittelija <br>
+              hanne <span class="nav__bold">lehtinen</span><br>
+              luova <span class="nav__bold">suunnittelija</span><br>
               Opiskelen tietojenkäsittelyä Jyväskylän ammattikorkeakoulussa. Olen erikoistunut UI/UX-suunnitteluun,
               graafiseen suunnitteluun ja grafiikkaan. Lisäksi minulla on kokemusta 3D-mallintamisesta, animoinnista ja
               sosiaalisen median markkinoinnista.
             </p>
             <!-- Provide a link to your resume -->
-            <a href="#" class="btn">CV</a>
-          </div>
+            <a href="files/CV Hanne Lehtinen.pdf" class="btn" target="_blank">CV</a>          </div>
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
@@ -373,7 +343,7 @@
 
   <section class="contact" id="contact">
     <div class="row">
-      <h2>Get in Touch</h2>
+      <h2>Ota yhteyttä</h2>
       <div class="contact__info">
         <p>
           Are you looking for a fast-performing and user-friendly website to
@@ -384,7 +354,9 @@
           me is via an email.
         </p>
         <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+        <a href="mailto:hannelehtinen@outlook.com" class="btn">hannelehtinen@outlook.com</a>
+        <a href="https://www.linkedin.com/in/hannelehtinen" class="btn" target="_blank">LinkedIn</a>
+
       </div>
     </div>
   </section>
@@ -393,41 +365,11 @@
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image"
-              alt="Linkedin">
-          </a>
-        </li>
-      </ul>
-
+        <a href="index.html" class="nav__logo">hanne <span class="nav__bold">lehtinen</span></a>
       <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+        &copy; 2025 - Hanne Lehtinen. Template developed by <a href="https://nisar.dev" class="link">Nisar</a>.
       </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
     </div>
   </footer>
 
