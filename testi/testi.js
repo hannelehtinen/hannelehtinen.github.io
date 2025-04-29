@@ -1,84 +1,87 @@
-// Get all gallery items
-const galleryItems = document.querySelectorAll(".gallery-item");
 const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const captionText = document.getElementById("caption");
-const closeBtn = document.querySelector(".close");
+const lightboxImg = document.getElementById("lightboxImg");
+const images = document.querySelectorAll(".gallery img");
+const closeBtn = document.getElementById("closeBtn");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+let currentIndex = 0;
 
-// Loop through each gallery item
-galleryItems.forEach((item) => {
-  item.addEventListener("click", function () {
-    lightbox.style.display = "block"; // Show lightbox
-    lightboxImg.src = this.src; // Set lightbox image source
-    captionText.innerHTML = this.alt; // Set caption text
-  });
-});
-
-// Close lightbox when close button is clicked
-closeBtn.addEventListener("click", function () {
-  lightbox.style.display = "none"; // Hide lightbox
-});
-
-// Close lightbox when clicking outside of the image
-lightbox.addEventListener("click", function (event) {
-  if (event.target === this) {
-    this.style.display = "none"; // Hide lightbox if clicked outside
-  }
-});
-
-let currentIndex;
-
-// Function to open lightbox with specific index
-function openLightBox(index) {
-  currentIndex = index; // Store current index
-  const selectedItem = galleryItems[index];
-  lightbox.style.display = "block";
-  lightboxImg.src = selectedItem.src;
-  captionText.innerHTML = selectedItem.alt;
-}
-
-// Add click events for each item
-galleryItems.forEach((item, index) => {
-  item.addEventListener("click", () => openLightBox(index));
-});
-
-// Left arrow click event
-document.querySelector(".left-arrow").addEventListener("click", () => {
-  currentIndex = currentIndex > 0 ? currentIndex - 1 : galleryItems.length - 1;
-  openLightBox(currentIndex);
-});
-
-// Right arrow click event
-document.querySelector(".right-arrow").addEventListener("click", () => {
-  currentIndex = currentIndex < galleryItems.length - 1 ? currentIndex + 1 : 0;
-  openLightBox(currentIndex);
-});
-
-document.addEventListener("keydown", (event) => {
-  if (lightbox.style.display === "block") {
-    if (event.key === "ArrowLeft") {
-      // Left arrow key
-      currentIndex =
-        currentIndex > 0 ? currentIndex - 1 : galleryItems.length - 1;
-      openLightBox(currentIndex);
-    } else if (event.key === "ArrowRight") {
-      // Right arrow key
-      currentIndex =
-        currentIndex < galleryItems.length - 1 ? currentIndex + 1 : 0;
-      openLightBox(currentIndex);
-    } else if (event.key === "Escape") {
-      // Escape key closes light box
-      lightbox.style.display = "none";
-    }
-  }
-});
-
-const navSlide = () => {
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".navig");
-
-  burger.addEventListener("click", () => {
-    nav.classList.toggle("nav-active");
-  });
+const openLightbox = (index) => {
+  currentIndex = index;
+  lightboxImg.src = images[index].src;
+  lightbox.classList.add("active");
 };
-navSlide();
+
+const closeLightbox = () => {
+  lightbox.classList.remove("active");
+  lightboxImg.src = "";
+};
+
+const showNext = (e) => {
+  e?.stopPropagation();
+  lightboxImg.classList.add("fade-out");
+  setTimeout(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+    lightboxImg.classList.remove("fade-out");
+  }, 300);
+};
+
+const showPrev = (e) => {
+  e?.stopPropagation();
+  lightboxImg.classList.add("fade-out");
+  setTimeout(() => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+    lightboxImg.classList.remove("fade-out");
+  }, 300);
+};
+
+images.forEach((img, index) => {
+  img.addEventListener("click", () => openLightbox(index));
+});
+
+closeBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  closeLightbox();
+});
+
+nextBtn.addEventListener("click", showNext);
+prevBtn.addEventListener("click", showPrev);
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (!lightbox.classList.contains("active")) return;
+  if (e.key === "Escape") closeLightbox();
+  if (e.key === "ArrowRight") showNext(e);
+  if (e.key === "ArrowLeft") showPrev(e);
+});
+
+// Swipe gesture support
+let touchStartX = 0;
+let touchEndX = 0;
+
+lightbox.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+lightbox.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipeGesture();
+});
+
+function handleSwipeGesture() {
+  const swipeThreshold = 50;
+  const swipeDistance = touchEndX - touchStartX;
+
+  if (swipeDistance > swipeThreshold) {
+    showPrev(new Event("swipe"));
+  } else if (swipeDistance < -swipeThreshold) {
+    showNext(new Event("swipe"));
+  }
+}

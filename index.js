@@ -1,4 +1,3 @@
-
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".navig");
@@ -8,8 +7,6 @@ const navSlide = () => {
   });
 };
 navSlide();
-
-
 
 /* -----------------------------------------
   Have focus outline only for keyboard users 

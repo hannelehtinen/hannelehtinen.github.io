@@ -330,7 +330,6 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Navigation ----- */
 /* --------------------------------------- */
 
-
 nav {
   width: 100%;
   display: flex;
@@ -465,7 +464,7 @@ nav {
   background: url("images/header.png");
   background-size: cover;
   background-position: bottom;
-  height: 130vh;
+  height: 100vh;
 }
 
 .hero {
@@ -508,7 +507,7 @@ nav {
 }
 @media (max-width: 700px) {
   .header__main {
-    height: 100vh;
+    height: 80vh;
   }
   .hero {
     align-items: flex-end;
@@ -561,8 +560,12 @@ nav {
 }
 
 .project__text .title {
-  line-height: var(--line-height-small);
   font-weight: 600;
+}
+
+.project__text p {
+  line-height: var(--line-height-small);
+  margin: var(--gutter-small) 0;
 }
 
 #number {
@@ -676,7 +679,7 @@ nav {
   margin: 1rem 0;
 }
 .timeline p {
-  margin: 0;
+  margin: var(--gutter-small) 0;
 }
 
 .timeline .title {
