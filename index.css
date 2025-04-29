@@ -241,7 +241,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .btn--pink {
-  background: var(--green);
+  border: 1px solid var(--pink);
+  background: var(--pink);
   transition: all 0.2s;
 }
 
@@ -725,35 +726,47 @@ nav {
 /* --------------------------------------- */
 
 .other__projects {
-  width: 80%;
+  width: 100%;
   justify-content: center;
+  justify-self: center;
+}
+
+.other__projects a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: ease-in-out 0.3s;
+  text-wrap: wrap;
+  align-items: center;
+  line-height: 5;
+}
+
+.other__projects a:hover {
+  color: var(--pink);
+  transform: scale(1.1);
 }
 
 .project__logos {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .project__logo {
-  height: 14rem;
-  transition: ease-in-out 0.2s;
-}
-
-.project__logo:hover {
-  transform: scale(1.1);
+  height: 25rem;
 }
 
 @media (max-width: 1240px) {
-  .project__logos {
-    overflow-x: scroll;
-    padding: var(--gutter-normal);
-  }
-
   .project__logo:not(:last-of-type) {
     margin-right: var(--gutter-medium);
   }
 }
 
+@media (max-width: 700px) {
+  .project__logo {
+    max-width: 20rem;
+  }
+}
 /* --------------------------------------- */
 /* ----- About ----- */
 /* --------------------------------------- */
@@ -777,16 +790,16 @@ nav {
 
 .about__photo-container {
   margin-bottom: var(--gutter-normal);
-  transition: 1s ease;
+  transition: 1.5s ease;
 }
 
 .about__photo-container:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 @media (min-width: 901px) {
   .about__text {
-    flex: 0 0 35%;
+    flex: 0 0 30%;
   }
 
   .about__photo-container {
@@ -808,100 +821,102 @@ nav {
 /* --------------------------------------- */
 
 .project__page {
-  text-align: left;
   line-height: var(--line-height-normal);
   flex: 0 0 60%;
+  margin-top: var(--gutter-huge);
 }
 
 .gallery {
-  padding: 20px;
-  max-width: 100%;
-  margin: 0 auto;
   display: grid;
-  gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 20px;
 }
 
-.gallery-item {
-  max-width: 100%; /* Four items per row */
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
   cursor: pointer;
-  transition: transform 0.2s; /* Smooth scaling effect */
-  padding: 0;
-  margin: 0;
-  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-item:hover {
-  transform: scale(1.05); /* Scale up on hover */
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .lightbox {
-  display: none; /* Hidden by default */
   position: fixed;
-  z-index: 1000; /* Sit on top */
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
-  align-items: center;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.lightbox-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
   justify-content: center;
-  animation: zoomIn 0.3s ease-in-out;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease forwards;
 }
 
-.lightbox-content {
+.lightbox.active {
   display: flex;
-  margin: auto;
-  /* max-width: 80%; Responsive width */
-  max-width: 90vw;
-  max-height: 80vh;
-  margin-bottom: 1rem;
-  margin-top: 5%;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-.close {
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+  animation: zoomIn 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.lightbox img.fade-out {
+  opacity: 0;
+}
+
+.lightbox .close,
+.lightbox .arrow {
   position: absolute;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 4rem;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.2s ease;
+}
+
+.lightbox .close:hover,
+.lightbox .arrow:hover {
+  color: var(--pink);
+}
+
+.lightbox .close {
   top: 20px;
   right: 30px;
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease;
 }
 
-.arrow {
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-size: 3rem;
-  transition: 0.3s ease;
-  cursor: pointer;
+.lightbox .arrow.left {
+  left: 20px;
 }
 
-.arrow:hover,
-.close:hover {
-  font-size: 3.3rem;
+.lightbox .arrow.right {
+  right: 20px;
 }
 
-.left-arrow {
-  left: 0;
-}
-
-.right-arrow {
-  right: 0;
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
@@ -913,14 +928,15 @@ nav {
   }
 }
 
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
+@media (max-width: 600px) {
+  .lightbox .close {
+    font-size: 1.5rem;
+    top: 10px;
+    right: 20px;
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
+
+  .lightbox .arrow {
+    font-size: 2rem;
   }
 }
 
